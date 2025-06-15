@@ -1,0 +1,27 @@
+:root {
+  --bg-color: #ffffff; /* white background */
+  --text-color: #111111; /* almost black text */
+  --primary-color: #333333; /* dark gray */
+  --secondary-color: #f0f0f0; /* light gray for cards, buttons, etc. */
+  --border-color: #cccccc; /* medium gray border */
+  --base-variant-color: #dee2e6;
+}
+
+.darkMode {
+  --bg-color: #111111; /* almost black background */
+  --text-color: #f5f5f5; /* light text */
+  --primary-color: #eeeeee; /* light gray */
+  --secondary-color: #1e1e1e; /* dark gray elements */
+  --border-color: #333333; /* very dark border */
+  --base-variant-color: #2b2f33; /* dark gray with similar contrast */
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}

@@ -1,0 +1,203 @@
+/*General Sidebar Component Styless*/
+
+.sidebarContent {
+}
+
+.sidebarContent input {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebarContent .sectionTitle {
+  text-align: center;
+  font-family: "Inter";
+  font-weight: Bold;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.personalSection,
+.educationSection,
+.workSection,
+.projectsSection,
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  gap: 5px;
+  border: 2px solid var(--border-color);
+}
+
+.workSection div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.divider {
+  margin: 1rem 0rem;
+}
+
+/*Form Input & Label*/
+
+.formLabel {
+  display: block;
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: "Inter";
+  font-weight: bold;
+}
+
+.formInput,
+.formTextarea {
+  font-family: "Inter";
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.formTextarea {
+  min-height: 6rem;
+}
+
+.formTextarea:focus {
+  min-height: 10rem;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.2);
+  outline: none;
+}
+
+/*Buttons*/
+
+.addButton {
+  font-family: "Inter";
+  background-color: #4caf50;
+  color: white;
+  border: 2px solid black;
+  padding: 8px 16px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #45a049;
+}
+
+.deleteButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 10px;
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 500;
+
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+.buttonControls {
+  padding: 0.5rem 0rem;
+}
+
+/*Achievements*/
+.achievements div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.achievements div .formInput,
+.achievements .deleteButton,
+.achievements .addButton {
+  margin: 0;
+}
+
+/*Skills*/
+.skillsSection [class*="skill"] {
+  display: flex;
+  gap: 10px;
+  margin: 1rem;
+}
+
+.skillsSection [class*="skill"] .deleteButton {
+  border-radius: 15%;
+}
+
+.skillsSection [class*="skill"] svg {
+  height: 35px;
+  width: 25px;
+}
+
+.skillsSection div .formInput,
+.skillsSection .deleteButton,
+.skills .addButton {
+  margin: 0;
+}
+
+.skillsSection .buttonControls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skillsSection .addSkillsControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skillsSection .buttonControls .addButton {
+  margin: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-color);
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.skillsSection .addCategoryContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skillsSection .addButton {
+  margin: 0;
+}

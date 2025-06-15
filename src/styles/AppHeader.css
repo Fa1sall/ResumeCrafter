@@ -1,0 +1,50 @@
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-bottom: 3px solid var(--border-color);
+  color: var(--primary-color);
+  padding: 0rem 1rem;
+  font-family: "Poppins";
+}
+
+.headerControls > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.lightModeIcon {
+  fill: var(--text-color);
+}
+
+.darkModeIcon {
+  fill: var(--text-color);
+}
+
+.toggleThemeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  background-color: var(--base-variant-clr);
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.downloadPDF {
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.5rem;
+  font-weight: 500;
+}

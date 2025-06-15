@@ -1,0 +1,44 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  border-right: 2px solid var(--border-color);
+}
+
+.sidebarNav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+}
+
+.sidebarNav .activeBtn {
+  border-bottom: 2px solid var(--text-color);
+}
+
+.sidebarNavBtn {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  padding: 0.5rem;
+}
+
+.sidebarNavBtn:hover {
+  transform: scale(1.2);
+}
+
+.sidebarNavBtn:active {
+  transform: scale(0.9);
+}
+
+.sidebarNav svg {
+  fill: var(--text-color);
+  width: 2rem;
+  height: 2rem;
+}
+
+.sidebarContent {
+  height: 80vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
