@@ -4,6 +4,7 @@
   box-sizing: border-box;
   height: 100%;
   border-right: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .sidebarNav {
@@ -38,7 +39,6 @@
 }
 
 .sidebarContent {
-  height: 80vh;
   box-sizing: border-box;
   overflow-y: auto;
 }

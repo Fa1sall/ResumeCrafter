@@ -1,8 +1,8 @@
-export function EducationSection({ educationData, setEducationData }) {
+export function EducationForm({ educationData, setEducationData }) {
   function handleChange(e, index) {
     const { name, value } = e.target;
     const updatedData = [...educationData];
-    updatedData[index][name] = value.trim();
+    updatedData[index][name] = value;
     setEducationData(updatedData);
   }
 
@@ -28,8 +28,8 @@ export function EducationSection({ educationData, setEducationData }) {
   }
 
   return (
-    <div className="educationSection">
-      <div className="sectionTitle">Education</div>
+    <div className="educationForm">
+      <div className="formTitle">Education</div>
       {educationData.map((entry, index) => (
         <div key={index} className={`educationEntry`}>
           <label htmlFor={`degree-${index}`} className="formLabel">
@@ -52,6 +52,16 @@ export function EducationSection({ educationData, setEducationData }) {
             value={entry.institution}
             onChange={(e) => handleChange(e, index)}
           />
+          <label htmlFor={`institution-${index}`} className="formLabel">
+            Grade
+          </label>
+          <input
+            type="text"
+            className="formInput"
+            name="grade"
+            value={entry.grade}
+            onChange={(e) => handleChange(e, index)}
+          />
           <label className="formLabel" htmlFor={`startDate-${index}`}>
             Start Date
           </label>
@@ -60,7 +70,7 @@ export function EducationSection({ educationData, setEducationData }) {
             className="formInput"
             name="startDate"
             value={entry.startDate}
-            onChange={(e) => handleChange(index, e)}
+            onChange={(e) => handleChange(e, index)}
           />
           <label className="formLabel" htmlFor={`endDate-${index}`}>
             End Date
@@ -70,7 +80,7 @@ export function EducationSection({ educationData, setEducationData }) {
             className="formInput"
             name="endDate"
             value={entry.endDate}
-            onChange={(e) => handleChange(index, e)}
+            onChange={(e) => handleChange(e, index)}
           />
           <label className="formLabel" htmlFor={`location-${index}`}>
             Location
@@ -80,7 +90,7 @@ export function EducationSection({ educationData, setEducationData }) {
             className="formInput"
             name="location"
             value={entry.location}
-            onChange={(e) => handleChange(index, e)}
+            onChange={(e) => handleChange(e, index)}
           />
           {educationData.length > 1 && (
             <div className="deleteButtonContainer">

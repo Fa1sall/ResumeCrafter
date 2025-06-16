@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function SkillsSection({ skillsData, setSkillsData }) {
+export function SkillsForm({ skillsData, setSkillsData }) {
   const [newSkillInputs, setNewSkillInputs] = useState(
     skillsData.map(() => "")
   );
@@ -8,7 +8,7 @@ export function SkillsSection({ skillsData, setSkillsData }) {
   const [newCategoryInput, setNewCategoryInput] = useState("");
 
   function handleSkillChange(e, index, skillIndex) {
-    const value = e.target.value.trim();
+    const value = e.target.value;
     const updatedData = [...skillsData];
     updatedData[index].skills[skillIndex] = value;
     setSkillsData(updatedData);
@@ -39,7 +39,7 @@ export function SkillsSection({ skillsData, setSkillsData }) {
 
   function handleAddNewSkillChange(e, index) {
     const skillInputs = [...newSkillInputs];
-    skillInputs[index] = e.target.value.trim();
+    skillInputs[index] = e.target.value;
     setNewSkillInputs(skillInputs);
   }
 
@@ -48,7 +48,7 @@ export function SkillsSection({ skillsData, setSkillsData }) {
   }
 
   function handleAddCategory() {
-    const newCategory = newCategoryInput.trim();
+    const newCategory = newCategoryInput;
     const updatedData = [
       ...skillsData,
       {
@@ -68,8 +68,8 @@ export function SkillsSection({ skillsData, setSkillsData }) {
   }
 
   return (
-    <div className="skillsSection">
-      <div className="sectionTitle">Skills</div>
+    <div className="skillsForm">
+      <div className="formTitle">Skills</div>
       {skillsData.map((entry, index) => (
         <div key={index}>
           <label className={`formLabel category-${entry.category}`}>
@@ -124,6 +124,7 @@ export function SkillsSection({ skillsData, setSkillsData }) {
             </div>
             <div className="deleteControl">
               <button
+                aria-label={`Delete ${entry.category}`}
                 className="deleteButton"
                 onClick={() => handleDeleteCategory(index)}
               >
@@ -147,7 +148,11 @@ export function SkillsSection({ skillsData, setSkillsData }) {
             }
           }}
         />
-        <button className="addButton" onClick={handleAddCategory}>
+        <button
+          className="addButton"
+          onClick={handleAddCategory}
+          aria-label="Add Category"
+        >
           Add
         </button>
       </div>

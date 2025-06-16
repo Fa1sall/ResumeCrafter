@@ -9,6 +9,11 @@
   font-family: "Poppins";
 }
 
+.appHeader a:first-child {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 .headerControls > div {
   display: flex;
   flex-direction: row;
@@ -16,12 +21,13 @@
   gap: 10px;
 }
 
-.lightModeIcon {
-  fill: var(--text-color);
+.lightModeIcon,
+.darkModeIcon {
+  fill: var(--bg-color);
 }
 
 .darkModeIcon {
-  fill: var(--text-color);
+  fill: var(--bg-color);
 }
 
 .toggleThemeBtn {
@@ -30,21 +36,12 @@
   align-items: center;
   height: 50px;
   width: 50px;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--bg-color);
   border-radius: 50%;
-  background-color: var(--base-variant-clr);
+  background-color: var(--text-color);
   cursor: pointer;
 }
 
 button {
   cursor: pointer;
-}
-
-.downloadPDF {
-  border: 2px solid var(--text-color);
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  border-radius: 0.5rem;
-  padding: 0.6rem 0.5rem;
-  font-weight: 500;
 }

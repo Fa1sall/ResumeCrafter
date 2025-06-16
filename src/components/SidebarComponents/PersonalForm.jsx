@@ -1,15 +1,15 @@
-export function PersonalSection({ personalData, setPersonalData }) {
+export function PersonalForm({ personalData, setPersonalData }) {
   function handleChange(e) {
     const { name, value } = e.target;
     setPersonalData((prevData) => ({
       ...prevData,
-      [name]: value.trim(),
+      [name]: value,
     }));
   }
 
   return (
-    <div className="personalSection">
-      <div className="sectionTitle">Personal</div>
+    <div className="personalForm">
+      <div className="formTitle">Personal</div>
       <label className="formLabel" htmlFor="firstName">
         First Name
       </label>
@@ -60,8 +60,8 @@ export function PersonalSection({ personalData, setPersonalData }) {
       <input
         type="text"
         className="formInput"
-        name="linkedin"
-        value={personalData.linkedin}
+        name="socials"
+        value={personalData.socials}
         onChange={handleChange}
       />
 

@@ -1,75 +1,76 @@
-export function ProjectsSection({ projectsData, setProjectsData }) {
+export function WorkForm({ workData, setWorkData }) {
   function handleChange(e, index) {
     const { name, value } = e.target;
-    const updatedData = [...projectsData];
+    const updatedData = [...workData];
     updatedData[index][name] = value;
-    setProjectsData(updatedData);
+    setWorkData(updatedData);
   }
 
-  function handleAddProjects() {
+  function handleAddWork() {
     const updatedData = [
-      ...projectsData,
+      ...workData,
       {
-        title: "",
-        skillsUsed: "",
+        workTitle: "",
+        company: "",
         startDate: "",
         endDate: "",
+        location: "",
         achievements: [],
       },
     ];
-    setProjectsData(updatedData);
+    setWorkData(updatedData);
   }
 
-  function handleDeleteProjects(index) {
-    const updatedData = projectsData.filter((_, i) => i !== index);
-    setProjectsData(updatedData);
+  function handleDeleteWork(index) {
+    const updatedData = workData.filter((_, i) => i !== index);
+    setWorkData(updatedData);
   }
 
   function handleAchievementChange(e, index, achindex) {
-    const value = e.target.value.trim();
-    const updatedData = [...projectsData];
+    const value = e.target.value;
+    const updatedData = [...workData];
     updatedData[index].achievements[achindex] = value;
-    setProjectsData(updatedData);
+    setWorkData(updatedData);
   }
 
   function handleAddAchievement(index) {
-    const updatedData = [...projectsData];
+    const updatedData = [...workData];
     updatedData[index].achievements.push("");
-    setProjectsData(updatedData);
+    setWorkData(updatedData);
   }
 
   function handleDeleteAchievement(workIndex, achIndex) {
-    const updatedData = [...projectsData];
+    const updatedData = [...workData];
     updatedData[workIndex].achievements = updatedData[
       workIndex
     ].achievements.filter((_, i) => i !== achIndex);
-    setProjectsData(updatedData);
+    setWorkData(updatedData);
   }
 
   return (
     <>
-      <div className="workSection">
-        <div className="sectionTitle">Projects</div>
-        {projectsData.map((entry, index) => (
+      <div className="workForm">
+        <div className="formTitle">Work</div>
+        {workData.map((entry, index) => (
           <div key={index}>
-            <label htmlFor={`projectTitle-${index}`} className="formLabel">
-              Project Title
+            <label htmlFor={`workTitle-${index}`} className="formLabel">
+              Work Title
             </label>
             <input
               type="text"
               className="formInput"
-              name="title"
-              value={entry.title}
+              name="workTitle"
+              value={entry.workTitle}
               onChange={(e) => handleChange(e, index)}
             />
-            <label htmlFor={`skillsUsed-${index}`} className="formLabel">
-              Skills Used (Separated By Commas)
+            <label htmlFor={`company-${index}`} className="formLabel">
+              Company
             </label>
             <input
               type="text"
               className="formInput"
-              name="skillsUsed"
-              value={entry.skillsUsed}
+              name="company"
+              value={entry.company}
               onChange={(e) => handleChange(e, index)}
             />
             <label htmlFor={`startDate-${index}`} className="formLabel">
@@ -90,6 +91,16 @@ export function ProjectsSection({ projectsData, setProjectsData }) {
               className="formInput"
               name="endDate"
               value={entry.endDate}
+              onChange={(e) => handleChange(e, index)}
+            />
+            <label htmlFor={`location-${index}`} className="formLabel">
+              Location
+            </label>
+            <input
+              type="text"
+              className="formInput"
+              name="location"
+              value={entry.location}
               onChange={(e) => handleChange(e, index)}
             />
             <label htmlFor={`achievements-${index}`} className="formLabel">
@@ -123,12 +134,12 @@ export function ProjectsSection({ projectsData, setProjectsData }) {
                 >
                   + Add Achievement
                 </button>
-                {projectsData.length > 1 && (
+                {workData.length > 1 && (
                   <button
                     className="deleteButton"
-                    onClick={() => handleDeleteProjects(index)}
+                    onClick={() => handleDeleteWork(index)}
                   >
-                    Delete Project
+                    Delete Work
                   </button>
                 )}
               </div>
@@ -136,8 +147,8 @@ export function ProjectsSection({ projectsData, setProjectsData }) {
             </div>
           </div>
         ))}
-        <button className="addButton" onClick={handleAddProjects}>
-          Add Project
+        <button className="addButton" onClick={handleAddWork}>
+          Add Work
         </button>
       </div>
     </>

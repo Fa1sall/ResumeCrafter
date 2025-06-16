@@ -1,0 +1,177 @@
+.resumeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.resumeHeader > div:first-child {
+  font-size: 1.5em;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+.resumeButtonControls {
+  display: flex;
+  gap: 1rem;
+}
+
+.downloadPDFButton,
+.clearResumeButton {
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.5rem;
+  font-weight: 500;
+  font-family: "Poppins";
+  transition: transform 0.2s ease-in-out;
+}
+
+.downloadPDFButton {
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  border-color: var(--bg-color);
+}
+
+.downloadPDFButton:active,
+.clearResumeButton:active {
+  transform: scale(0.8);
+}
+
+.resumeContent {
+  background: var(--bg-color);
+  box-shadow: 0 0 10px var(--text-color);
+  width: 210mm;
+  min-height: 297mm;
+  padding: 5mm;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-variant-numeric: lining-nums; /*Number aligns uniformly with upperCase letter*/
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/*space between section*/
+.spacer {
+  height: 8px;
+}
+
+.resumeContent ul {
+  margin: 0.2rem 0rem;
+}
+
+.boldTitle {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.divider {
+  margin: 0.5rem 0rem 0rem 0rem;
+}
+
+.splitLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.splitLine div:last-child {
+  font-weight: bold;
+}
+
+.resSectionTitle {
+  font-size: 1.3em;
+}
+
+/*Personal Section*/
+
+.resPersonalDetails {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem 0rem 0.8rem 0rem;
+  background-color: var(--secondary-color);
+}
+
+.resPersonalDetails a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.resName {
+  display: flex;
+  font-size: 2.4em;
+}
+
+.resDate {
+  display: flex;
+  flex-direction: row;
+}
+
+[class*="resDegree"] {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Projects Secion*/
+.splitProjectLine {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.splitLine .resDate {
+  text-wrap: nowrap;
+}
+
+[class*="resSkill"],
+.splitProjectLine span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1em;
+}
+
+/*Skill Section*/
+.skillsSection span {
+  text-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  [class*="Form"] {
+    margin: 1rem 0.5rem;
+  }
+
+  .resumeHeader {
+    margin-bottom: 0.5rem;
+  }
+
+  .resumeButtonControls {
+    justify-content: center;
+    transform: scale(0.8);
+    white-space: nowrap;
+  }
+
+  .scaleResume {
+    transform: scale(0.47);
+    transform-origin: top left;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .resumeHeader {
+    margin-bottom: 0.5rem;
+  }
+
+  .resumeButtonControls {
+    justify-content: center;
+    transform: scale(0.8);
+    white-space: nowrap;
+  }
+
+  .scaleResume {
+    transform: scale(0.7);
+    transform-origin: top left;
+  }
+}
