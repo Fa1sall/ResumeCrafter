@@ -138,7 +138,7 @@
   text-wrap: wrap;
 }
 
-/* For phones like iPhone SE, 375px width */
+/*Small phones*/
 @media (max-width: 400px) {
   .resumeHeader {
     align-items: normal;
@@ -167,7 +167,7 @@
   }
 }
 
-/* For slightly wider phones */
+/*Larger Phones*/
 @media (min-width: 401px) and (max-width: 600px) {
   .resumeHeader {
     align-items: normal;
@@ -183,14 +183,20 @@
   .scaleResume {
     transform: scale(0.5);
     transform-origin: top left;
+    height: auto;
   }
 
   [class*="Form"] {
     margin: 1rem 0.5rem;
   }
+
+  .resumeContainer {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
 }
 
-/* Tablets */
+/*Tablets*/
 @media (min-width: 601px) and (max-width: 1024px) {
   .resumeButtonControls {
     transform: scale(0.9);

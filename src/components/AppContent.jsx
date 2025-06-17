@@ -93,7 +93,7 @@ export function AppContent() {
   ]);
 
   const [settingsData, setSettingsData] = useState({
-    fontSize: "1",
+    fontSize: "0.8",
   });
 
   function handleClearResume() {
@@ -110,7 +110,7 @@ export function AppContent() {
     setWorkData([]);
     setProjectsData([]);
     setSkillsData([]);
-    setSettingsData({ fontSize: "1" });
+    setSettingsData({ fontSize: "0.8" });
   }
 
   return (
