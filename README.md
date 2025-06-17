@@ -1,6 +1,6 @@
 # 📄 ResumeCrafter
 
-## **ResumeCrafter** is a modern, single-page resume builder that lets users create, preview, and download professional one-page resumes. With dynamic sections and responsive design.
+**ResumeCrafter** is a modern, single-page resume builder that lets users create, preview, and download professional one-page resumes with dynamic sections and responsive design.
 
 ## 📸 Preview
 
