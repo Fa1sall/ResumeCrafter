@@ -1,12 +1,46 @@
-# React + Vite
+# 📄 ResumeCrafter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **ResumeCrafter** is a modern, single-page resume builder that lets users create, preview, and download professional one-page resumes. With dynamic sections and responsive design.
 
-Currently, two official plugins are available:
+## 📸 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🖥️ UI with Live Preview
 
-## Expanding the ESLint configuration
+![ResumeCrafter UI Preview](./src/assets/Preview/resumecrafter-ui.jpeg)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🖨️ PDF Download Output
+
+![ResumeCrafter PDF Preview](./src/assets/Preview/resumecrafter-pdf.jpg)
+
+---
+
+## ✨ Key Features
+
+- 🧩 Dynamic sections: Personal, Education, Work, Projects, Skills
+- 📝 Real-time preview of the resume
+- 🎨 Light/Dark mode toggle
+- 🖨️ One-click PDF download (html2pdf.js integration)
+- 📱 Fully responsive across devices
+
+---
+
+## ⚙️ Built With
+
+- **React.js** – Component-based UI
+- **JavaScript (ES6)** – Logic and state management
+- **CSS3** – Clean, responsive design using media queries
+- **html2pdf.js** – Print-ready PDF generation
+- **Vercel** – Deployment platform
+
+---
+
+## 🚀 Getting Started
+
+### Clone the Repo
+
+```bash
+git clone https://github.com/Fa1sall/ResumeCrafter.git
+cd ResumeCrafter
+npm install
+npm run dev
+```
