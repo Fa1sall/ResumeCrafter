@@ -67,7 +67,14 @@ input[class="formInput"] {
 }
 
 .formTextarea {
-  min-height: 6rem;
+  width: 100%;
+  max-width: 100%;
+  min-height: 7em;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--text-color);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
 }
 
 .formTextarea:focus {
