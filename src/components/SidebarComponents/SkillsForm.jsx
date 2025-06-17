@@ -86,8 +86,15 @@ export function SkillsForm({ skillsData, setSkillsData }) {
                 key={index}
               />
               <div
+                role="button"
+                tabIndex={0}
                 className="deleteButton"
                 onClick={() => handleDeleteSkill(index, skillIndex)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleDeleteSkill(index, skillIndex);
+                  }
+                }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
