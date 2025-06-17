@@ -12,8 +12,6 @@
 
 ![ResumeCrafter PDF Preview](./src/assets/Preview/resumecrafter-pdf.jpg)
 
----
-
 ## ✨ Key Features
 
 - 🧩 Dynamic sections: Personal, Education, Work, Projects, Skills
@@ -22,9 +20,7 @@
 - 🖨️ One-click PDF download (html2pdf.js integration)
 - 📱 Fully responsive across devices
 
----
-
-## ⚙️ Built With
+## 🛠️ Built With
 
 - **React.js** – Component-based UI
 - **JavaScript (ES6)** – Logic and state management
@@ -32,11 +28,9 @@
 - **html2pdf.js** – Print-ready PDF generation
 - **Vercel** – Deployment platform
 
----
-
 ## 🚀 Getting Started
 
-### Clone the Repo
+### Installation
 
 ```bash
 git clone https://github.com/Fa1sall/ResumeCrafter.git
