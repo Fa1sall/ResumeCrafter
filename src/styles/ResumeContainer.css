@@ -40,7 +40,8 @@
 }
 
 .resumeContent {
-  background: var(--bg-color);
+  background: white;
+  color: black;
   box-shadow: 0 0 10px var(--text-color);
   width: 210mm;
   min-height: 297mm;
@@ -92,11 +93,11 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0rem 0rem 0.8rem 0rem;
-  background-color: var(--secondary-color);
+  background-color: #f0f0f0;
 }
 
 .resPersonalDetails a {
-  color: var(--text-color);
+  color: black;
   text-decoration: none;
 }
 
