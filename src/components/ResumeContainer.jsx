@@ -51,23 +51,21 @@ export function ResumeContainer({
     <div className="resumeContainer">
       <div className="resumeHeader">
         <div>Preview</div>
-        <div>
-          <div className="resumeButtonControls">
-            <button
-              className="clearResumeButton"
-              onClick={handleClearResume}
-              aria-label="Clear Resume"
-            >
-              Clear Resume
-            </button>
-            <button
-              className="downloadPDFButton"
-              onClick={handleDownload}
-              aria-label="Download Resume as PDF"
-            >
-              Download as PDF
-            </button>
-          </div>
+        <div className="resumeButtonControls">
+          <button
+            className="clearResumeButton"
+            onClick={handleClearResume}
+            aria-label="Clear Resume"
+          >
+            Clear Resume
+          </button>
+          <button
+            className="downloadPDFButton"
+            onClick={handleDownload}
+            aria-label="Download Resume as PDF"
+          >
+            Download as PDF
+          </button>
         </div>
       </div>
       <div

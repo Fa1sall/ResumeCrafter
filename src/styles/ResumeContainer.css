@@ -44,7 +44,7 @@
   box-shadow: 0 0 10px var(--text-color);
   width: 210mm;
   min-height: 297mm;
-  padding: 5mm;
+  padding: 5mm 8mm;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-variant-numeric: lining-nums; /*Number aligns uniformly with upperCase letter*/
   overflow: hidden;
@@ -138,40 +138,68 @@
   text-wrap: wrap;
 }
 
-@media (max-width: 600px) {
-  [class*="Form"] {
-    margin: 1rem 0.5rem;
+/* For phones like iPhone SE, 375px width */
+@media (max-width: 400px) {
+  .resumeHeader {
+    align-items: normal;
   }
 
-  .resumeHeader {
-    margin-bottom: 0.5rem;
+  .resumeHeader div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
   }
 
   .resumeButtonControls {
-    justify-content: center;
-    transform: scale(0.8);
+    transform: scale(0.6);
+    transform-origin: top left;
     white-space: nowrap;
+    margin-left: 0.5rem;
   }
 
   .scaleResume {
-    transform: scale(0.47);
+    transform: scale(0.39); /* Not too small */
     transform-origin: top left;
+  }
+
+  [class*="Form"] {
+    margin: 0.5rem;
   }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+/* For slightly wider phones */
+@media (min-width: 401px) and (max-width: 600px) {
   .resumeHeader {
-    margin-bottom: 0.5rem;
+    align-items: normal;
   }
 
   .resumeButtonControls {
-    justify-content: center;
     transform: scale(0.8);
+    transform-origin: top left;
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+
+  .scaleResume {
+    transform: scale(0.5);
+    transform-origin: top left;
+  }
+
+  [class*="Form"] {
+    margin: 1rem 0.5rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .resumeButtonControls {
+    transform: scale(0.9);
+    transform-origin: top left;
     white-space: nowrap;
   }
 
   .scaleResume {
-    transform: scale(0.7);
+    transform: scale(0.75);
     transform-origin: top left;
   }
 }

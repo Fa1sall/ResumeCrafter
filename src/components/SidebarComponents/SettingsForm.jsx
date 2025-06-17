@@ -14,7 +14,7 @@ export function SettingsForm({ settingsData, setSettingsData }) {
     <div className="settingsForm">
       <div className="formTitle">Settings</div>
       <label htmlFor="resumFontSize" className="formLabel">
-        Enter Resume Font Size (in rem)
+        Enter Resume Font Size (in rem, e.g. 0.5 or higher)
       </label>
       <input
         type="number"
